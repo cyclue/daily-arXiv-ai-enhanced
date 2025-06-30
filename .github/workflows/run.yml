@@ -31,8 +31,8 @@ jobs:
         bash run.sh
     - name: commit
       run: |
-        git config --global user.email "mmabba001@outlook.com"
-        git config --global user.name "Adam"
+        git config --global user.email "${{ vars.EMAIL }}"
+        git config --global user.name "${{ vars.NAME }}"
         git add .
         # 检查是否有变更需要提交
         if git diff --staged --quiet; then
